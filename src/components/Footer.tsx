@@ -21,13 +21,15 @@ export default function Footer() {
             <p className="text-gray-400 font-light leading-relaxed max-w-md mb-8">
               依托中通国脉（股票代码：603559）产业体系基础，聚焦数据中心业务、云与算力服务、大模型接入服务、行业智能化解决方案，致力于为政府、运营商、企事业单位及各行业客户提供覆盖基础设施、平台能力与智能应用的一体化服务。
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[var(--color-tech-accent)]/20 transition-colors">
-                <span className="sr-only">WeChat</span>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M8.5 13.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm7 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-3.5-8c-4.7 0-8.5 3.1-8.5 7 0 2.2 1.2 4.1 3 5.4v3.1l3.2-1.6c.7.2 1.5.3 2.3.3 4.7 0 8.5-3.1 8.5-7s-3.8-7-8.5-7z" clipRule="evenodd" />
-                </svg>
-              </a>
+            <div className="flex items-center gap-6">
+              <div className="p-2 bg-white rounded-lg inline-block">
+                {/* 请在左侧文件管理器的 public 文件夹中上传您的二维码图片，并命名为 qrcode.png */}
+                <img src="/qrcode.png" alt="WeChat QR Code" className="w-24 h-24 object-cover" onError={(e) => { e.currentTarget.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.ztgm-jl.com'; }} />
+              </div>
+              <div className="text-sm text-gray-400">
+                <p className="mb-1 text-white font-medium">扫码添加微信</p>
+                <p>获取专属智能化解决方案</p>
+              </div>
             </div>
           </motion.div>
 
@@ -57,15 +59,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-[var(--color-tech-accent)] shrink-0 mt-0.5" />
-                <span>吉林省长春市</span>
+                <span>中国.长春</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Phone className="w-5 h-5 text-[var(--color-tech-accent)] shrink-0" />
-                <span>400-XXX-XXXX</span>
+                <span>+86 17790014436</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Mail className="w-5 h-5 text-[var(--color-tech-accent)] shrink-0" />
-                <span>contact@ztgm-jl.com</span>
+                <span>lglc930@gmail.com</span>
               </li>
             </ul>
           </motion.div>
